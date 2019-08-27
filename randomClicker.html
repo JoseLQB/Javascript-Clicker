@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="clicker.css">
+        <meta charset="utf-8">
+        <script src="other.js"></script>
+        <script src="clicks.js"></script>
+    </head>
+    <body>
+     <hr><h1 id="title">THIS  IS  RANDOM  CLICKER</h1><hr>
+     <div id="juegoClicker">
+
+        <h1 id="contador">0</h1>
+        <div class="image" ></div>
+            <img src="images/imagen.png" onclick="clic();"/>
+            <p>Click me!</p>
+        </div>
+        <br><br>  
+        <button onclick="comprar(0);">CURSOR (100)</button>
+        <button onclick="comprar(1);">POWER x2 (200)</button>
+        <button onclick="comprar(2);">POWER x10 (400)</button>
+        <br><button onclick="suicide();">SUICIDE -|--</button>
+        <table border="1">
+            <tr>
+                <td><div id="inventario"></div></td>
+            </tr>
+        </table>
+    </div>
+    </body>
+</html>

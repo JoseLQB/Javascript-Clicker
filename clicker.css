@@ -1,5 +1,11 @@
 #title{
     background-color:orangered;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Lobster;
     text-align: center;
+    text-shadow: 10px;
+}
+
+#juegoClicker{
+    font-family: monospace;
+    font-size: 17px;
 }

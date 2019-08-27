@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="clicker.css">
         <meta charset="utf-8">
-        <script src="juego.js"></script>
-        <script src="clicks.js"></script>
+        <title>Inicio</title>
     </head>
     <body>
-     <hr><h1 id="title">THIS IS RANDOM CLICKER</h1><hr>
-     <div id="juegoClicker">
-
-        <h1 id="contador">0</h1>
-        <img src="images/imagen.png" onclick="clic();"/>
-        <br><br>  
-        <button onclick="comprar(0);">CURSOR (100)</button>
-        <button onclick="comprar(1);">POWER x2 (200)</button>
-        <button onclick="comprar(2);">POWER x10 (400)</button>
-        <br><button onclick="suicide();">SUICIDE -|--</button>
-        <table border="1">
-            <tr>
-                <td><div id="inventario"></div></td>
-            </tr>
-        </table>
-    </div>
-    <form name="form1" method="post" action="muertes.php">
-
-    </form>  
+        <hr><h1 id="title">Bienvenido</h1></hr>
+        <div>
+            <p>
+                <form action="randomClicker.html">
+                    <input type="text" placeholder="Nombre" required><br>
+                    <input type="text" placeholder="Apellido" required><br>
+                    <button type="submit">Empezar a jugar</button>
+                </form>
+            </p>
+        </div>
     </body>
 </html>
