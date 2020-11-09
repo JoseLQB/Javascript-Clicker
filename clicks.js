@@ -4,12 +4,18 @@ var inventario = [0, 0, 0, 0, 0, 0];
 var clicksProduce = [1, 2, 4, 10, 20, 40];
 var precioProducto = [100, 200, 400, 600, 1000, 1600];
 
-//acciones
+//acctions
 function clic() {
     clicks++;
 }
 function suicide() {
-    alert("¡ESTÁS MUERTO!");
+    if(localStorage.getItem('rescue') === null) {
+        localStorage.setItem('rescue',1);
+    } else {
+        localStorage.setItem('rescue', parseInt(localStorage.getItem('rescue')) + 1);
+    }
+    var count = localStorage.getItem('rescue');
+    alert("¡ESTÁS MUERTO!" + " - Esta es la "+ count + "ª vez que mueres.");
     location.reload();
 }
 function comprar(objeto) {
