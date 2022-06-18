@@ -2,13 +2,13 @@
 var clicks = 0;
 var inventario = [0, 0, 0, 0, 0, 0];
 var clicksProduce = [1, 2, 4, 10, 20, 40];
-var precioProducto = [100, 200, 400, 600, 1000, 1600];
+var precioProducto = [100, 200, 400, 600, 1000, 1600, 50000];
 
 //acctions
-function clic() {
-    clicks++;
-}
-function suicide() {
+
+let clic = () => clicks++;
+
+let suicide = () => {
     if(localStorage.getItem('rescue') === null) {
         localStorage.setItem('rescue',1);
     } else {
@@ -18,21 +18,26 @@ function suicide() {
     alert("¡ESTÁS MUERTO!" + " - Esta es la "+ count + "ª vez que mueres.");
     location.reload();
 }
-function comprar(objeto) {
-    if (clicks >= precioProducto[objeto]) {
+
+let comprar = (objeto) => {
+    if (clicks >= precioProducto[objeto] && objeto != 6) {
         inventario[objeto]++;
         clicks -= precioProducto[objeto];
-    }
-    else {
+    }else if(clicks >= precioProducto[objeto] && objeto == 6){
+        clicks -= precioProducto[6];
+        hiddenSquare2();
+    }else {
         console.log("NO TIENES SUFICIENTE DINERO");
     }
 }
-function producir() {
+
+let producir = () => {
     for (contador = 0; contador < inventario.length; contador++) {
         clicks += inventario[contador] * clicksProduce[contador];
     }
 }
-function render() {
+
+let render = () => {
     document.getElementById("contador").innerHTML = clicks;
     document.getElementById("inventario").innerHTML =
         `Cursores: ${inventario[0]}<br>
@@ -41,6 +46,13 @@ function render() {
     Power x50: ${inventario[3]}<br>
     Power x100: ${inventario[4]}<br>
     Power x160: ${inventario[5]}`;
+}
+
+let hiddenSquare2 = () =>{
+    var noHidden = document.getElementById('square2');
+    var noButton = document.getElementById('newSq');
+    noHidden.style.display = 'inline';
+    noButton.disabled = true;
 }
 
 //refresco de pantalla

@@ -19,3 +19,7 @@
 form{
     padding: 20px;
 }
+
+#square2{
+    display: none;
+}
