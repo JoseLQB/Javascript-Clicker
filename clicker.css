@@ -1,3 +1,9 @@
+
+.content{
+    margin-left: 44px;
+    margin-right: 44px;
+}
+
 #title{
     background-color:orangered;
     font-family: Lobster;
@@ -5,6 +11,7 @@
     text-shadow: 10px;
     display:block;
 }
+
 
 #juegoClicker{
     font-family: monospace;
@@ -20,6 +27,58 @@ form{
     padding: 20px;
 }
 
+#square1{
+    animation: fadein 3s;
+}
+.fadeIn3s{
+    animation: fadein 3s;
+}
 #square2{
     display: none;
+}
+
+/*BOTONES*/
+button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px;
+    border-radius: 8px;
+
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
+}
+
+button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+button:active { 
+    background-color: lime; 
+} 
+
+button[disabled=disabled], button:disabled {
+    background-color:grey;
+    color: white;
+}
+
+/*TABLA*/
+
+
+
+/*Aparición del segundo square*/
+.square2{
+    animation: fadein 2s;
+}
+
+/*ANIMACIONES*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

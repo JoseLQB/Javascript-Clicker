@@ -8,31 +8,36 @@
         <script src="clicks.js"></script>
     </head>
     <body>
-     <hr><h1 id="title">THIS  IS  RANDOM  CLICKER</h1><hr>
-     <div id="juegoClicker">
-
-        <h1 id="contador">0</h1>
-        <div class="image" ></div>
-        <img id="square1" src="images/imagen.png" onclick="clic();"/>
-        <img id="square2" src="images/imagen.png" onclick="clic();"/>
-            <p>Click me!</p>
+        <div class="header">
+            <hr><h1 id="title">THIS  IS  RANDOM  CLICKER</h1><hr>
         </div>
-        <br><br>  
-        <button onclick="comprar(0);">CURSOR (100)</button>
-        <button onclick="comprar(1);">POWER x2 (200)</button>
-        <button onclick="comprar(2);">POWER x10 (400)</button>
-        <br>
-        <button onclick="comprar(3);">POWER x50 (600)</button>
-        <button onclick="comprar(4);">POWER x100 (1000)</button>
-        <button onclick="comprar(5);">POWER x160 (1600)</button>
-        <br><button id="newSq" onclick="comprar(6);">BLOQUE (50000)</button>
-        <br><button onclick="suicide();">SUICIDE -|--</button>
-       
-        <table border="1">
-            <tr>
-                <td><div id="inventario"></div></td>
-            </tr>
-        </table>
-    </div>
+        <div class="content">
+            <div id="juegoClicker">
+
+            <h1 class="fadeIn3s" id="contador">0</h1>
+            <div class="image" ></div>
+            <img id="square1" src="images/imagen.png" onclick="clicked();"/>
+            <img id="square2" class="" src="images/imagen.png" onclick="clicked();"/>
+                <p id="clickMe">Click me!</p>
+            </div>
+            <div class="cursors">
+                <br><br>  
+                <button onclick="comprar(0);">CURSOR (100)</button>
+                <button onclick="comprar(1);">POWER x2 (200)</button>
+                <button onclick="comprar(2);">POWER x10 (400)</button>
+                <br>
+                <button onclick="comprar(3);">POWER x50 (600)</button>
+                <button onclick="comprar(4);">POWER x100 (1000)</button>
+                <button onclick="comprar(5);">POWER x160 (1600)</button>
+                <br><button id="newSq" onclick="comprar(6);">BLOQUE (50000)</button>
+                <br><button onclick="suicide();">SUICIDE -|--</button>
+            
+                <table border="1">
+                    <tr>
+                        <td><div id="inventario"></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </body>
 </html>
